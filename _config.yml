@@ -21,7 +21,7 @@ repository               : "jisalascaceres/jisalascaceres.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpeg"
+  avatar           : "profile.png"
   name             : "José Salas-Cáceres"
   pronouns         : # example: "she/her"  
   bio              : "PHD-Student in Computational Ingeniering"
