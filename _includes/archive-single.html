@@ -43,7 +43,16 @@
         {% elsif post.collection == 'publications' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif item.collection == 'media' %}
-          <p> {{ item.title }}, <a href="{{ item.link }}">{{ item.link }}</a>, {{ item.date | default: "1900-01-01" | date: "%Y" }} </p>
+        <h2>{{ item.title }}</h2> <!-- Title in markdown style -->
+
+        <p>
+          <strong>Posted in {{ item.venue }} on {{ item.date | default: "1900-01-01" | date: "%B %d, %Y" }}</strong> <!-- Posted phrase -->
+        </p>
+        
+        <p> 
+          <a href="{{ item.link }}" target="_blank">Link</a> <!-- Word "Link" instead of URL -->
+        </p>
+        
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
 
