@@ -1,0 +1,113 @@
+{
+    "2026": [
+    {
+      "title": "Identification of Vegetation Communities Using Segmentation of Aerial Images",
+      "authors": "José Salas-Cáceres, Riccardo Balia, Marcos Salas-Pascual, Javier Lorenzo-Navarro, and Modesto Castrillón-Santana",
+      "venue": "Applied Vegetation Science",
+      "type": "Journal",
+      "doi": "https://doi.org/10.1111/avsc.70070",
+      "tags": ["open-access","ecology","plant-science"]
+    },
+    {
+      "title": "A Python-Based Workflow for Asbestos Roof Mapping and Temporal Monitoring Using Satellite Imagery",
+      "authors": "Giuseppe Bonifazi, Alice Aurigemma, José Salas-Cáceres, Javier Lorenzo-Navarro, Silvia Serranti, Federica Paglietti, Sergio Bellagamba, and Sergio Malinconico",
+      "venue": "Geomatics",
+      "type": "Journal",
+      "doi": "https://doi.org/10.3390/geomatics6030041",
+      "tags": ["open-access","ecology"]
+    },
+      {
+        "title": "Detection of Microplastics in Coastal Environments Based on Semantic Segmentation",
+        "authors": "Javier Lorenzo-Navarro, José Salas-Cáceres, Modesto Castrillón-Santana, May Gómez, and Alicia Herrera",
+        "venue": "Microplastics",
+        "type": "Journal",
+        "doi": "https://doi.org/10.3390/microplastics5020066",
+        "tags": ["open-access","ecology"]
+      },
+
+        {
+          "title": "A Lightweight Solution for Pose-Based Recognition for Isolated Spanish Sign Language Using Recurrent Models",
+          "authors": "Gerardo León-Quintana, José Salas-Cáceres, and Javier Lorenzo-Navarro",
+          "venue": "ICAART 2026 - 18th International Conference on Agents and Artificial Intelligence",
+          "type": "Conference",
+          "doi": "https://doi.org/10.5220/0014406800004052",
+          "tags": ["open-access","Biometry"]
+        }
+
+  ],
+
+  "2025": [
+        {
+      "title": "An Evaluation of a Visual Question Answering Strategy for Zero-shot Facial Expression Recognition in Still Images",
+      "authors": "José Salas-Cáceres, Modesto Castrillón-Santana, David Freire-Obregón, Olivertio J. Santana, Daniel Hernández-Sosa, and Javier Lorenzo-Navarro",
+      "venue": "VCIP 2025 - International Conference on Visual Communications and Image Processing",
+      "type": "Conference",
+      "doi": "https://doi.org/10.1109/VCIP67698.2025.11396850",
+      "URL": "",
+      "tags": ["embargo-2026","Biometry","Expression-Recognition"]
+    },
+    {
+      "title": "Modeling Cultural Bias in Facial Expression Recognition with Adaptive Agents",
+      "authors": "David Freire-Obregón, José Salas-Cáceres, Javier Lorenzo-Navarro, Oliverio J. Santana, Daniel Hernández-Sosa, and Modesto Castrillón-Santana",
+      "venue": "FLLM 2025 - 3rd International Conference on Foundation and Large Language Models",
+      "type": "Conference",
+      "doi": "https://doi.org/10.1109/FLLM67465.2025.11390959",
+      "tags": ["open-access","Biometry","Expression-Recognition"]
+    },
+    {
+      "title": "Leveraging Generalist VQA Models to Improve Zero-Shot Pedestrian Attribute Recognition",
+      "authors": "José Salas-Cáceres",
+      "venue": "CAIP 2025 - 21st International Conference on Computer Analysis of Images and Patterns",
+      "type": "Conference",
+      "doi": "https://doi.org/10.1007/978-3-032-04968-1",
+      "tags": ["embargo-2026","Biometry"]
+    },
+    {
+      "title": "Gran Canaria vegetation segmentation dataset from multi-year aerial imagery for environmental monitoring and conservation",
+      "authors": "José Salas-Cáceres, Riccardo Balia, Marcos Salas-Pascual, Javier Lorenzo-Navarro, and Modesto Castrillón-Santana",
+      "venue": "Data in Brief",
+      "type": "Journal",
+      "doi": "https://doi.org/10.1016/j.dib.2025.111419",
+      "tags": ["open-access","Ecology","plant-science"]
+    },
+      {
+        "title": "Multimodal Emotion Recognition via Multilevel Fusion of Visual, Audio, and Textual Data",
+        "authors": "José Salas-Cáceres, Javier Lorenzo-Navarro, and Modesto Castrillón-Santana",
+        "venue": "ICIAP 2025 - 23rd International Conference on Image Analysis and Processing",
+        "type": "Conference",
+        "doi": "https://doi.org/10.1007/978-3-032-10192-1_45",
+        "tags": ["embargo-2026","Biometry","Expression-Recognition"]
+      },
+
+      {
+        "title": "Zero-Shot Evaluation of Commercial Software and State-of-the-Art FER Models on Standardized Datasets",
+        "authors": "José Salas-Cáceres, Javier Lorenzo-Navarro, Modesto Castrillón-Santana, Patricia Picazo-Peral, and Sergio Moreno-Gil",
+        "venue": "ICIAP 2025 - 23rd International Conference on Image Analysis and Processing",
+        "type": "Conference",
+        "doi": "https://doi.org/10.1007/978-3-032-11317-7_4",
+        "tags": ["open-access","Biometry","Expression-Recognition"]
+      },
+      {
+        "title": "Multimodal emotion recognition based on a fusion of audiovisual information with temporal dynamics",
+        "authors": "José Salas-Cáceres, Javier Lorenzo-Navarro, David Freire-Obregón and Modesto Castrillón-Santana",
+        "venue": "Multimedia Tools and Applications",
+        "type": "Journal",
+        "doi": "https://doi.org/10.1007/s11042-024-20227-6",
+        "tags": ["open-access","Biometry","Expression-Recognition"]
+      }
+
+  ],
+
+
+  "2023": [
+    {
+      "title": "Novelty Detection in Human-Machine Interaction Through a Multimodal Approach",
+      "authors": "José Salas-Cáceres, Javier Lorenzo-Navarro, David Freire-Obregón and Modesto Castrillón-Santana",
+      "venue": "CIARP 2023 - 26th Iberoamerican Congress in Patten Recognition, Image Analysis, Computer Vision, and Applications",
+      "type": "Conference",
+      "doi": "https://doi.org/10.1007/978-3-031-49018-7_33",
+      "URL": "",
+      "tags": ["embargo ended","Biometry"]
+    }
+  ]
+}

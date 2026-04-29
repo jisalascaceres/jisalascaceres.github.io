@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --color-bg: #fafaf8;
+            --color-text: #1a1a18;
+            --color-text-secondary: #6b6b66;
+            --color-accent: #2563eb;
+            --color-border: #e5e5e0;
+            --color-hover: #f0f0ed;
+            --font-serif: 'Crimson Text', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: var(--font-serif);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-family: var(--font-serif);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-bio {
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+        }
+
+        /* Social Profiles */
+        .social-profiles {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-profiles a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--color-border);
+            transition: all 0.3s ease;
+            color: var(--color-text);
+        }
+
+        .social-profiles a:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+            text-decoration: none;
+        }
+
+        .social-profiles svg {
+            display: block;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--color-border);
+            animation: fadeInUp 0.8s ease;
+            animation-fill-mode: both;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: var(--font-serif);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--color-accent);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .item-title {
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .item-meta {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .item-description {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Publication styles */
+        .publication {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .publication-authors {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.2rem;
+        }
+
+        .publication-venue {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-type {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            background: #f0f0ed;
+            color: var(--color-text);
+            border-radius: 3px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-type.journal {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .publication-type.conference {
+            background: #ddd6fe;
+            color: #4c1d95;
+        }
+
+        .publication-links {
+            font-size: 0.85rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Links */
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 900px;
+            margin: 6rem auto 0;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loading {
+            color: var(--color-text-secondary);
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                padding: 3rem 1rem 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            section {
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+            }
+
+            .social-profiles {
+                gap: 1rem;
+            }
+
+            .publication-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-title">José Salas-Cáceres</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#press">Press</a></li>
+                <li><a href="#research">Projects</a></li>
+                <li><a href="#misc">Misc</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>José Salas-Cáceres</h1>
+        <p class="subtitle">PHD Student • Universidad de Las Palmas de Gran Canaria <br> Contact: jose.salas@ulgpc.es </p>
+        
+        <p class="hero-bio">
+  
+        </p>
+        
+        <!-- Social Profiles -->
+        <div class="social-profiles">
+             <a href="https://orcid.org/0009-0004-7543-3385" target="_blank" rel="noopener noreferrer" title="ORCID">
+                <img src="svg\ORCID-iD_icon_vector.svg" alt="ORCID" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/jos%C3%A9-ignacio-salas-c%C3%A1ceres-477438281/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <img src="svg\linkedin.svg" alt="linkedin" width="24" height="24">
+            </a>
+            <a href="https://github.com/Jisalascaceres" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <img src="svg\github.svg" alt="github" width="24" height="24">
+            </a>
+            <a href="https://scholar.google.es/citations?hl=es&view_op=list_works&gmla=AILGF5U4NXRkxvqCbZtiZ5_r6MVIe9-tTFIiJ-73oQbme1CgaNqls-HWVuyL6m8UBEl6Fmck98XPwW9bqwsAeNI4vlZcoZlkzmDB_DE3ak16xEs&user=hHIRtUcAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+                <img src="svg\scholar.svg" alt="Google Scholar" width="24" height="24">
+            </a>
+            <a href="https://www.researchgate.net/profile/Jose-Salas-Caceres" target="_blank" rel="noopener noreferrer" title="ResearchGate">
+                <img src="svg\researchgate.svg" alt="Researchgate " width="24" height="24">
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="display: flex; gap: 2rem; align-items: flex-start;">
+            <img src="images/Foto.jpg" alt="Photo" style="width: 180px; height: 180px; border-radius: 8px; object-fit: cover; flex-shrink: 0;">
+            <div>
+                <p style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+                    Currently juggling research on human–machine interaction,particularly multimodal and affective computing, alongside ecology-related work such as vegetation segmentation and detection using remote sensing techniques. I’m especially interested in multidisciplinary research that leverages machine learning to advance other scientific fields.
+                </p>
+                <ul style="color: var(--color-text-secondary); margin-left: 1.5rem; line-height: 1.8;">
+                    <li>Degree in Industrial and Automatic Electronics Engineering</li>
+                    <li>Master's Degree in Smart Systems and Numerical Applications in Engineering</li>
+                    <li> (In progress) PhD in Telecommunications Technologies and Computational Engineering</li>
+                    <li>Lecturer at Universidad de Las Palmas de Gran Canaria</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <div id="publications-container" class="loading">Loading publications...</div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <div id="teaching-container" class="loading">Loading teaching information...</div>
+        </section>
+
+        <!-- Press Section -->
+        <section id="press">
+            <h2>Press & Media</h2>
+            <div id="press-container" class="loading">Loading press information...</div>
+        </section>
+
+        <!-- Research Projects Section -->
+        <section id="research">
+            <h2>Research Projects</h2>
+            <div id="research-container" class="loading">Loading research projects...</div>
+        </section>
+
+        <!-- Miscellaneous Section -->
+        <section id="misc">
+            <h2>Miscellaneous</h2>
+            <div id="misc-container" class="loading">Loading miscellaneous information...</div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="mailto:jose.salas@ulpgc.es">Email</a> • 
+            <a href="https://www.linkedin.com/in/jos%C3%A9-ignacio-salas-c%C3%A1ceres-477438281/">LinkedIn</a> • 
+            <a href="https://github.com/Jisalascaceres">GitHub</a> • 
+            <a href="https://orcid.org/0009-0004-7543-3385">ORCID</a> •
+            <a href="https://scholar.google.es/citations?hl=es&view_op=list_works&gmla=AILGF5U4NXRkxvqCbZtiZ5_r6MVIe9-tTFIiJ-73oQbme1CgaNqls-HWVuyL6m8UBEl6Fmck98XPwW9bqwsAeNI4vlZcoZlkzmDB_DE3ak16xEs&user=hHIRtUcAAAAJ">Google Scholar</a> 
+        </p>
+    </footer>
+
+    <script>
+        // Load and render data from JSON files
+        async function loadData() {
+            try {
+                // Load publications
+                const publicationsData = await fetch('data/publications.json').then(r => r.json());
+                renderPublications(publicationsData);
+
+                // Load teaching
+                const teachingData = await fetch('data/teaching.json').then(r => r.json());
+                renderTeaching(teachingData);
+
+                // Load press
+                const pressData = await fetch('data/press.json').then(r => r.json());
+                renderPress(pressData);
+
+                // Load research
+                const researchData = await fetch('data/research.json').then(r => r.json());
+                renderResearch(researchData);
+
+                // Load misc
+                const miscData = await fetch('data/misc.json').then(r => r.json());
+                renderMisc(miscData);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('publications-container').innerHTML = '<p style="color: red;">Error loading data files. Make sure the data folder exists in the same directory as index.html</p>';
+            }
+        }
+
+        function renderPublications(data) {
+            let html = '';
+ 
+            // Get years in descending order
+            const years = Object.keys(data).sort((a, b) => b - a);
+ 
+            years.forEach(year => {
+                html += `<h3>${year}</h3>`;
+                data[year].forEach(pub => {
+                    const typeClass = pub.type.toLowerCase();
+                    
+                    // Render tags if they exist
+                    let tagsHtml = '';
+                    if (pub.tags && pub.tags.length > 0) {
+                        tagsHtml = '<div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">';
+                        pub.tags.forEach(tag => {
+                            let tagColor = '#dbeafe'; // default blue
+                            let tagTextColor = '#1e40af';
+                            
+                            if (tag === 'open-access') {
+                                tagColor = '#dcfce7';
+                                tagTextColor = '#166534';
+                            }
+                            else if (tag.includes('embargo') && tag.includes('ended')) {
+                                tagColor = '#d1fae5';
+                                tagTextColor = '#065f46';
+                            } else if (tag.includes('embargo') || tag.includes('restricted')) {
+                                tagColor = '#fee2e2';
+                                tagTextColor = '#991b1b';
+                            }
+                            
+                            tagsHtml += `<span style="font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; background: ${tagColor}; color: ${tagTextColor}; border-radius: 3px;">${tag}</span>`;
+                        });
+                        tagsHtml += '</div>';
+                    }
+                    
+                    html += `
+                        <div class="publication">
+                            <div>
+                                <span class="publication-type ${typeClass}">${pub.type}</span>
+                            </div>
+                            <div class="publication-title">${pub.title}</div>
+                            <div class="publication-authors">${pub.authors}</div>
+                            <div class="publication-venue">${pub.venue}</div>
+                            ${tagsHtml}
+                            <div class="publication-links">
+                                ${pub.url ? `<a href="${pub.url}" target="_blank">🔗 View Publication</a>` : ''}
+                                ${pub.doi ? `<a href="${pub.doi}" target="_blank">🔗 DOI</a>` : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+ 
+            document.getElementById('publications-container').innerHTML = html;
+        }
+
+
+        function renderTeaching(data) {
+            let html = '';
+ 
+            if (data.courses && data.courses.length > 0) {
+                data.courses.forEach(course => {
+                    html += `
+                        <div class="item">
+                            <div class="item-title">${course.name}</div>
+                            <div class="item-meta">${course.institution} • ${course.Curso}</div>
+                            <div class="item-meta" style="font-size: 0.85rem; color: var(--color-text-secondary);">${course.Años}</div>
+                            <div class="item-description">${course.description}</div>
+                        </div>
+                    `;
+                });
+            }
+ 
+            document.getElementById('teaching-container').innerHTML = html || '<p>No teaching information available.</p>';
+        }
+
+        function renderPress(data) {
+            let html = '';
+
+            // Get years in descending order
+            const years = Object.keys(data).sort((a, b) => b - a);
+
+            years.forEach(year => {
+                html += `<h3>${year}</h3>`;
+                data[year].forEach(item => {
+                    html += `
+                        <div class="publication">
+                            <div class="publication-title">${item.title}</div>
+                            <div class="publication-authors">${item.publication}</div>
+                            <div class="publication-venue">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: '2-digit', year: 'numeric' })}</div>
+                            <div class="item-description" style="margin-top: 0.5rem;">
+                                ${item.description}
+                                <br><a href="${item.url}" target="_blank">Read more →</a>
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+
+            document.getElementById('press-container').innerHTML = html || '<p>No press information available.</p>';
+        }
+
+        function renderResearch(data) {
+            let html = '';
+
+            if (data.projects && data.projects.length > 0) {
+                data.projects.forEach(project => {
+                    html += `
+                        <div class="item">
+                            <div class="item-title">${project.name}</div>
+                            <div class="item-meta">${project.role}${project.funding ? ' • ' + project.funding : ''} • ${project.duration}</div>
+                            <div class="item-description">${project.description}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            document.getElementById('research-container').innerHTML = html || '<p>No research projects available.</p>';
+        }
+
+        function renderMisc(data) {
+            let html = '';
+
+            // Awards
+            if (data.awards && data.awards.length > 0) {
+                data.awards.forEach(award => {
+                    html += `
+                        <div class="item">
+                            <div class="item-title">${award.title}</div>
+                            <div class="item-meta">${award.organization} • ${award.year}</div>
+                            <div class="item-description">${award.description}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            // Service
+            if (data.service && data.service.length > 0) {
+                if (html) html += '';
+                data.service.forEach(service => {
+                    html += `
+                        <div class="item">
+                            <div class="item-title">${service.title}</div>
+                            <div class="item-meta">${service.organization} • ${service.years}</div>
+                            <div class="item-description">${service.description}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            // Other
+            if (data.other && data.other.length > 0) {
+                if (html) html += '';
+                data.other.forEach(item => {
+                    html += `
+                        <div class="item">
+                            <div class="item-title">${item.title}</div>
+                            <div class="item-description">${item.description}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            document.getElementById('misc-container').innerHTML = html || '<p>No miscellaneous information available.</p>';
+        }
+
+        // Load all data when page is ready
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+
+</body>
+</html>

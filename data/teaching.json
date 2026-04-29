@@ -1,0 +1,11 @@
+{
+  "courses": [
+    {
+      "name": "Visión Por Computador",
+      "institution": "Universidad de Las Palmas de Gran Canaria",
+      "Curso": "4º del Grado en Ingeniería Informática",
+      "description": "Clases Prácticas 60 horas.",
+      "Años":"2024-2026"
+    }
+  ]
+}

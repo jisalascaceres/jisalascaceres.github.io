@@ -1,75 +1,268 @@
-# Academic Pages
-**Academic Pages is a Github Pages template for academic websites.**
+# Academic Portfolio
 
-# Getting Started
+Personal academic website for [Your Name]
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## Repository Structure
 
-See more info at https://academicpages.github.io/
-
-## Running locally
-
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-Start by build the container:
-
-```bash
-docker build -t jekyll-site .
+```
+your-username.github.io/
+├── index.html                          # Main website
+├── data/                               # JSON data files
+│   ├── publications.json              # Publications data
+│   ├── teaching.json                  # Teaching data
+│   ├── press.json                     # Press/media coverage data
+│   ├── research.json                  # Research projects data
+│   └── misc.json                      # Awards, service, other info
+├── publications/                       # Folder containing all publication PDFs
+│   ├── example-publication-2024.pdf
+│   ├── another-publication-2023.pdf
+│   └── conference-paper-2024.pdf
+├── README.md                           # This file
+└── .gitignore                          # Git ignore file
 ```
 
-Next, run the container:
-```bash
-docker run -p 4000:4000 --rm -v $(pwd):/usr/src/app jekyll-site
+## How It Works
+
+The website uses **JSON data files** to manage content. Instead of editing HTML directly, you simply update the JSON files in the `data/` folder, and the website automatically loads and displays the information.
+
+**Benefits:**
+- ✅ Easy to add/remove publications, teaching, etc.
+- ✅ Clean separation between data and presentation
+- ✅ No HTML editing needed
+- ✅ Consistent formatting automatically applied
+
+## Updating Your Content
+
+### Publications
+Edit `data/publications.json` to add/remove publications organized by year:
+
+```json
+{
+  "2024": [
+    {
+      "title": "Your Paper Title",
+      "authors": "Your Name, Co-Authors",
+      "venue": "Journal Name",
+      "type": "journal",
+      "pdf_file": "your-paper-filename.pdf",
+      "doi": "https://doi.org/10.xxxx/xxxxx"
+    },
+    {
+      "title": "Conference Paper",
+      "authors": "Your Name, Co-Authors",
+      "venue": "Conference Name",
+      "type": "conference",
+      "pdf_file": "conference-paper.pdf",
+      "doi": "https://doi.org/10.xxxx/xxxxx"
+    }
+  ],
+  "2023": [...]
+}
 ```
 
-# Maintenance
+**Type options:** `"journal"` or `"conference"` (displayed as colored badges)
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+### Teaching
+Edit `data/teaching.json` to add courses:
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+```json
+{
+  "courses": [
+    {
+      "name": "Course Name",
+      "institution": "University Name",
+      "semester": "Spring 2024",
+      "role": "Instructor",
+      "description": "Course description..."
+    }
+  ]
+}
+```
 
-## Bugfixes and enhancements
+### Press & Media
+Edit `data/press.json` to add media coverage organized by year:
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+```json
+{
+  "2024": [
+    {
+      "title": "Article Title",
+      "publication": "Publication Name",
+      "date": "2024-01-15",
+      "url": "https://example.com/article",
+      "description": "Brief description..."
+    }
+  ],
+  "2023": [...]
+}
+```
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+### Research Projects
+Edit `data/research.json` to add research projects:
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+```json
+{
+  "projects": [
+    {
+      "name": "Project Name",
+      "role": "Principal Investigator",
+      "funding": "Funding Agency",
+      "duration": "2023-2025",
+      "description": "Project description..."
+    }
+  ]
+}
+```
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+### Miscellaneous
+Edit `data/misc.json` to add awards, service, and other info:
+
+```json
+{
+  "awards": [...],
+  "service": [...],
+  "other": [...]
+}
+```
+
+## Social Profiles
+
+The social profile icons are set up as empty SVG containers. To use your own custom SVGs:
+
+1. Find or create the SVG code for each social platform
+2. Open `index.html` and find the social profiles section in the hero
+3. Replace the `<!-- LINK TO YOUR SVG -->` comment with your actual SVG code
+
+For example, for ORCID:
+```html
+<a href="https://orcid.org/YOUR-ORCID-ID" target="_blank" rel="noopener noreferrer" title="ORCID">
+    <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+        <!-- Your ORCID SVG code here -->
+        <circle cx="128" cy="128" r="128" fill="#a6ce39"/>
+        <path d="M86.3 186.2H70.9V79.1h15.4v107.1z..." fill="#fff"/>
+    </svg>
+</a>
+```
+
+Also update the profile URLs:
+```html
+<a href="https://orcid.org/0000-0000-0000-0000" ... > → Your ORCID URL
+<a href="https://www.linkedin.com/in/yourprofile/" ... > → Your LinkedIn
+<a href="https://github.com/yourprofile" ... > → Your GitHub
+<a href="https://scholar.google.com/citations?user=XXXXX" ... > → Your Scholar ID
+<a href="https://www.researchgate.net/profile/YourProfile" ... > → Your ResearchGate
+```
+
+## About
+
+This is my academic portfolio showcasing my research, publications, teaching experience, and more.
+
+## Live Site
+
+Visit: `https://your-username.github.io`
+
+## Setup Instructions
+
+### 1. Create the Repository
+- On GitHub, create a **new public repository** named `your-username.github.io`
+- Replace `your-username` with your actual GitHub username
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/your-username/your-username.github.io.git
+cd your-username.github.io
+```
+
+### 3. Add Your Files
+- Place `index.html` in the root directory
+- Create a `data/` folder with all JSON files
+- Create a `publications/` folder
+- Add your PDF files to the `publications/` folder
+- Add `.gitignore` and `README.md` to the root
+
+### 4. Update the Content
+1. Edit `index.html` and replace:
+   - `Your Name` with your actual name
+   - `Your Title • Your Affiliation` with your real info
+   - Social profile URLs (ORCID, LinkedIn, GitHub, Scholar, ResearchGate)
+
+2. Edit each JSON file in the `data/` folder with your content
+
+3. Add your PDF files to the `publications/` folder
+
+4. Update file references in `publications.json` to match your PDF filenames
+
+### 5. Commit and Push
+```bash
+git add .
+git commit -m "Initial commit: Academic portfolio"
+git push origin main
+```
+
+### 6. Enable GitHub Pages (if not automatic)
+1. Go to your repository settings
+2. Scroll to "GitHub Pages" section
+3. Select `main` branch as the source
+4. Your site will be live at `https://your-username.github.io`
+
+## Adding New Items
+
+**To add a new publication:**
+1. Save your PDF to `publications/` folder
+2. Add an entry to the correct section in `data/publications.json`
+3. Make sure the `pdf_file` matches your filename exactly
+4. Commit and push - it updates automatically!
+
+**To add a new course:**
+1. Add an entry to `data/teaching.json`
+2. Commit and push
+
+**To add press coverage:**
+1. Add an entry to `data/press.json`
+2. Commit and push
+
+**Same process for research projects and miscellaneous items.**
+
+## Customization
+
+### Change Colors
+Edit the CSS variables at the top of `index.html`:
+```css
+:root {
+    --color-bg: #fafaf8;           /* Background color */
+    --color-text: #1a1a18;         /* Text color */
+    --color-accent: #2563eb;       /* Link and accent color */
+    /* ... etc ... */
+}
+```
+
+### Change Fonts
+The site uses:
+- **Crimson Text** for headings (serif, elegant)
+- **Inter** for body text (sans-serif, clean)
+
+You can change these in the `@import` line in the CSS section of `index.html`.
+
+## Notes
+
+- This is a **static HTML website** - no build process or server needed
+- JSON files are loaded dynamically by JavaScript
+- GitHub automatically publishes changes when you push to the repository
+- The site works offline too (great for backups!)
+- All changes are automatically deployed within seconds of pushing
+
+## Troubleshooting
+
+**Data not loading?**
+- Make sure the `data/` folder exists in your repository root
+- Check that JSON files are properly formatted (use a JSON validator)
+- Make sure file names match exactly (case-sensitive on some systems)
+
+**PDFs not downloading?**
+- Verify the `pdf_file` names in `publications.json` match the actual file names in `publications/` folder
+- Check that PDF files are actually in the `publications/` folder
+
+## Support
+
+For GitHub Pages documentation, visit: https://pages.github.com
+

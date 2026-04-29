@@ -1,0 +1,44 @@
+{
+  "2025": [
+    {
+      "title": "Un alumno de la ULPGC gana un premio internacional por un modelo para reconocer a peatones",
+      "publication": "La Vanguardia",
+      "date": "2025-09-26",
+      "url": "https://www.lavanguardia.com/vida/20250926/11099641/alumno-ulpgc-gana-premio-internacional-modelo-reconocer-peatones-agenciaslv20250926.html",
+      "description": "Artículo en el periódico Nacional La Vanguardia donde se hacen eco de haber ganado el PAR2025 Contest."
+    },
+
+    {
+      "title": "Un doctorando de la ULPGC gana el premio internacional PAR2025 por su modelo de reconocimiento de peatones",
+      "publication": "Conferencia de Directores y Decanos de Ingenería Informática (CODDII)",
+      "date": "2025-10-14",
+      "url": "https://coddii.org/un-doctorando-de-la-ulpgc-gana-el-premio-internacional-par2025-por-su-modelo-de-reconocimiento-de-peatones",
+      "description": "Artículo en el CODDII  donde se hacen eco de haber ganado el PAR2025 Contest."
+    }
+
+  ],
+  "2024": [
+    {
+      "title": "Convivir con robots en armonía: las claves de la róbotica social.",
+      "publication": "The Conversation",
+      "date": "2024-02-13",
+      "url": "https://theconversation.com/convivir-con-robots-en-armonia-las-claves-de-la-robotica-social-222322",
+      "description": "Artículo de divulgación científica en la plataforma The Conversation, donde se exploran algunos aspectos claves de la róbotia social."
+    },
+    {
+      "title": "Tecnología: ¿Habrá feeling con los robots?",
+      "publication": "La Provincia",
+      "date": "2024-03-04",
+      "url": "https://www.laprovincia.es/sociedad/2024/03/03/tecnologia-feeling-robots-ulpgc-98933916.html",
+      "description": "Artículo en el periódico autónomico La Provincia"
+    },
+
+    {
+      "title": "Programa de radio Futuro Abierto: La evolución de la róbotica social.",
+      "publication": "Radio Nacional Española (RNE)",
+      "date": "2024-10-14",
+      "url": "https://www.rtve.es/play/audios/futuro-abierto/evolucion-robotica-social-14-10-24/16286272/",
+      "description": "Participación en el programa de radio Futuro Abierto de RNE, donde se discute la evolución de la róbotica social y su impacto en la sociedad."
+    }
+  ]
+}
