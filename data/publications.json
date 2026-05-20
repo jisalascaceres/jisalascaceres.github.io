@@ -4,7 +4,7 @@
     {
       "title": "Attention-Based Multimodal Fusion for Salience-Aware Blended Emotion Recognition",
       "authors": "José Salas-Cáceres, Modesto Castrillón-Santana, Oliverio J. Santana, Daniel Hernández-Sosa, and Javier Lorenzo-Navarro",
-      "venue": "Multimedia Technologies and Interaction",
+      "venue": "Multimodal Technologies and Interaction",
       "type": "Journal",
       "doi": "https://doi.org/10.3390/mti10050056",
       "tags": ["open-access","Biometry","Expression-Recognition"]
@@ -26,23 +26,23 @@
       "doi": "https://doi.org/10.3390/geomatics6030041",
       "tags": ["open-access","ecology"]
     },
-      {
-        "title": "Detection of Microplastics in Coastal Environments Based on Semantic Segmentation",
-        "authors": "Javier Lorenzo-Navarro, José Salas-Cáceres, Modesto Castrillón-Santana, May Gómez, and Alicia Herrera",
-        "venue": "Microplastics",
-        "type": "Journal",
-        "doi": "https://doi.org/10.3390/microplastics5020066",
-        "tags": ["open-access","ecology"]
-      },
+    {
+      "title": "Detection of Microplastics in Coastal Environments Based on Semantic Segmentation",
+      "authors": "Javier Lorenzo-Navarro, José Salas-Cáceres, Modesto Castrillón-Santana, May Gómez, and Alicia Herrera",
+      "venue": "Microplastics",
+      "type": "Journal",
+      "doi": "https://doi.org/10.3390/microplastics5020066",
+      "tags": ["open-access","ecology"]
+    },
 
-        {
-          "title": "A Lightweight Solution for Pose-Based Recognition for Isolated Spanish Sign Language Using Recurrent Models",
-          "authors": "Gerardo León-Quintana, José Salas-Cáceres, and Javier Lorenzo-Navarro",
-          "venue": "ICAART 2026 - 18th International Conference on Agents and Artificial Intelligence",
-          "type": "Conference",
-          "doi": "https://doi.org/10.5220/0014406800004052",
-          "tags": ["open-access","Biometry"]
-        }
+    {
+      "title": "A Lightweight Solution for Pose-Based Recognition for Isolated Spanish Sign Language Using Recurrent Models",
+      "authors": "Gerardo León-Quintana, José Salas-Cáceres, and Javier Lorenzo-Navarro",
+      "venue": "ICAART 2026 - 18th International Conference on Agents and Artificial Intelligence",
+      "type": "Conference",
+      "doi": "https://doi.org/10.5220/0014406800004052",
+      "tags": ["open-access","Biometry"]
+    }
 
   ],
 
