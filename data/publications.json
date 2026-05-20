@@ -1,5 +1,15 @@
 {
     "2026": [
+
+    {
+      "title": "Attention-Based Multimodal Fusion for Salience-Aware Blended Emotion Recognition",
+      "authors": "José Salas-Cáceres, Modesto Castrillón-Santana, Oliverio J. Santana, Daniel Hernández-Sosa, and Javier Lorenzo-Navarro",
+      "venue": "Multimedia Technologies and Interaction",
+      "type": "Journal",
+      "doi": "https://doi.org/10.3390/mti10050056",
+      "tags": ["open-access","Biometry","Expression-Recognition"]
+    },  
+
     {
       "title": "Identification of Vegetation Communities Using Segmentation of Aerial Images",
       "authors": "José Salas-Cáceres, Riccardo Balia, Marcos Salas-Pascual, Javier Lorenzo-Navarro, and Modesto Castrillón-Santana",
@@ -43,7 +53,7 @@
       "venue": "VCIP 2025 - International Conference on Visual Communications and Image Processing",
       "type": "Conference",
       "doi": "https://doi.org/10.1109/VCIP67698.2025.11396850",
-      "URL": "",
+      "url": "",
       "tags": ["embargo-2026","Biometry","Expression-Recognition"]
     },
     {
@@ -85,7 +95,7 @@
         "venue": "ICIAP 2025 - 23rd International Conference on Image Analysis and Processing",
         "type": "Conference",
         "doi": "https://doi.org/10.1007/978-3-032-11317-7_4",
-        "tags": ["open-access","Biometry","Expression-Recognition"]
+        "tags": ["embargo-2026","Biometry","Expression-Recognition"]
       },
       {
         "title": "Multimodal emotion recognition based on a fusion of audiovisual information with temporal dynamics",
@@ -106,7 +116,7 @@
       "venue": "CIARP 2023 - 26th Iberoamerican Congress in Patten Recognition, Image Analysis, Computer Vision, and Applications",
       "type": "Conference",
       "doi": "https://doi.org/10.1007/978-3-031-49018-7_33",
-      "URL": "",
+      "url": "",
       "tags": ["embargo ended","Biometry"]
     }
   ]
