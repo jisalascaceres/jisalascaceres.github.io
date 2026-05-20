@@ -1,6 +1,6 @@
 # Academic Portfolio
 
-Personal academic website for [Your Name]
+Personal academic website
 
 ## Repository Structure
 
