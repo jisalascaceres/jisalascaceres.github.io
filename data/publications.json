@@ -24,7 +24,7 @@
       "venue": "Geomatics",
       "type": "Journal",
       "doi": "https://doi.org/10.3390/geomatics6030041",
-      "tags": ["open-access","ecology"]
+      "tags":  ["open-access","ecology"]
     },
     {
       "title": "Detection of Microplastics in Coastal Environments Based on Semantic Segmentation",
@@ -33,6 +33,15 @@
       "type": "Journal",
       "doi": "https://doi.org/10.3390/microplastics5020066",
       "tags": ["open-access","ecology"]
+    },
+
+    {
+      "title": "Dynamic Dropout: Leveraging Conway's Game of Life for Neural Network Regularization",
+      "authors": "David Freire-Obregón, José Salas-Cáceres, and Modesto Castrillón-Santana",
+      "venue": "ICMI 2026 - IEEE 5th International Conference on Computing and Machine Intelligence",
+      "type": "Conference",
+      "doi": "https://doi.org/10.1109/ICMI68585.2026.11539799", 
+      "tags": ["open-access"]
     },
 
     {
